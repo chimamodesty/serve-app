@@ -1,0 +1,27 @@
+{
+  "name": "serve-app",
+  "version": "0.0.1",
+  "description": "Service rendered API application",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "github.com/chimamodesty/serve-app"
+  },
+  "keywords": [
+    "API",
+    "handyman",
+    "books",
+    "music"
+  ],
+  "author": "Chima Modesty, Yannick leandro Da Silva and  David Ogbaudu",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "nodemon": "^3.0.1"
+  }
+}
