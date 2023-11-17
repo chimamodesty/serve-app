@@ -1,0 +1,12 @@
+POST http://localhost:8000/handyman/
+Content-Type: application/json
+
+{
+    "name": "James Smith",
+    "proffession": "Mason",
+    "city": "Asaba",
+    "tel": "09099090900"
+}
+
+###
+GET http://localhost:8000/handyman/
