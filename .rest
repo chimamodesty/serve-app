@@ -10,3 +10,19 @@ Content-Type: application/json
 
 ###
 GET http://localhost:8000/handyman/
+
+
+###
+GET http://localhost:8000/books/
+
+###
+POST http://localhost:8000/books/
+Content-Type: application/json
+
+{
+  "author": "Braun McKrean",
+  "title": "Mysql Fundamentals",
+  "edition": "2nd edition",
+  "year": "2018"
+
+}
