@@ -21,9 +21,9 @@ POST http://localhost:8000/books/
 Content-Type: application/json
 
 {
-  "author": "Jon Molly",
-  "title": "Python Essentials",
-  "edition": "2nd edition",
-  "year": "2018"
+  "author": "Jen Madison",
+  "title": "Java for All",
+  "edition": "1st edition",
+  "year": "2010"
 
 }
