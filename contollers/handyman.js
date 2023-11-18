@@ -15,7 +15,7 @@ const getAll = async( req, res, next) => {
 const createHandyman = async(req, res) => {
     const handyman = {
         name: req.body.name,
-        proffession: req.body.profession,
+        profession: req.body.profession,
         city: req.body.city,
         tel: req.body.tel
     }
