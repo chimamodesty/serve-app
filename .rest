@@ -20,8 +20,8 @@ POST http://localhost:8000/books/
 Content-Type: application/json
 
 {
-  "author": "Braun McKrean",
-  "title": "Mysql Fundamentals",
+  "author": "Jon Molly",
+  "title": "Python Essentials",
   "edition": "2nd edition",
   "year": "2018"
 
