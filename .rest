@@ -11,3 +11,19 @@ Content-Type: application/json
 
 ###
 GET http://localhost:8000/handyman/
+
+
+###
+GET http://localhost:8000/books/
+
+###
+POST http://localhost:8000/books/
+Content-Type: application/json
+
+{
+  "author": "Jon Molly",
+  "title": "Python Essentials",
+  "edition": "2nd edition",
+  "year": "2018"
+
+}
