@@ -18,7 +18,7 @@ const getSingle = async (req, res) => {
   });
 };
 
-const createartists = async (req, res) => {
+const createArtists = async (req, res) => {
   const artists = {
     name: req.body.name,
     genre: req.body.genre,
@@ -33,7 +33,7 @@ const createartists = async (req, res) => {
   }
 };
 
-const updateartists = async (req, res) => {
+const updateArtists = async (req, res) => {
   const userId = new ObjectId(req.params.id);
   // be aware of updateOne if you only want to update specific fields
   const artists = {
@@ -55,7 +55,7 @@ const updateartists = async (req, res) => {
   }
 };
 
-async function deleteartists(req, res) {
+async function deleteArtists(req, res) {
   const userId = new ObjectId(req.params.id);
   const response = await mongodb.getDb().db('serveapp1').collection('music').deleteOne({ _id: userId }, true);
   console.log(response);
@@ -69,7 +69,7 @@ async function deleteartists(req, res) {
 module.exports = {
   getAll,
   getSingle,
-  createartists,
-  updateartists,
-  deleteartists
+  createArtists,
+  updateArtists,
+  deleteArtists
 };

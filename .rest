@@ -27,3 +27,17 @@ Content-Type: application/json
   "year": "2010"
 
 }
+
+###
+GET http://localhost:8000/artists/
+
+###
+POST http://localhost:8000/artists/
+Content-Type: application/json
+
+{
+  "name": "Dream Theater",
+  "genre": "Progressive Metal",
+  "releaseDate": "2009",
+  "album": "Black Clouds & Silver Linings"
+}
