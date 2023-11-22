@@ -13,17 +13,40 @@ Content-Type: application/json
 GET http://localhost:8000/handyman/
 
 
-###
+### get books
 GET http://localhost:8000/books/
 
-###
+### create books
 POST http://localhost:8000/books/
 Content-Type: application/json
 
 {
-  "author": "Jen Madison",
-  "title": "Java for All",
+  "author": "Monroe Jack",
+  "title": "SASS for Beginners",
   "edition": "1st edition",
-  "year": "2010"
+  "year": "2015"
 
+}
+
+### Update books
+
+PUT http://localhost:8000/books/655e759729a6b904d67d6b57
+Content-Type: application/json
+
+{
+   "author": "Monroe Jack",
+    "title": "CSS Essentials",
+    "edition": "2nd edition",
+    "year": "2022"
+}
+
+### delete books
+DELETE http://localhost:8000/books/65592928d3eac796b0424cce
+Content-Type: application/json
+
+{
+    "author": "Jen Madison",
+    "title": "Java for All",
+    "edition": "1st edition",
+    "year": "2010"
 }
