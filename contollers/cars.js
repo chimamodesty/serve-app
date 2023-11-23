@@ -1,6 +1,6 @@
 const mongodb = require('../db/connect')
 const  ObjectId = require("mongodb").ObjectId
-const {carDataSchema,  idSchema, } = require("../validator/cars/schema")
+const {carDataSchema } = require("../validator/cars/schema")
 
 const createCar = async(req, res) => {
     const validation = await carDataSchema.validate(req.body)
