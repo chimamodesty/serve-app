@@ -1,0 +1,39 @@
+###
+GET http://localhost:8000/cars/655f58749e32c0e58a129ae4
+
+###
+GET http://localhost:8000/cars/
+
+
+###
+POST http://localhost:8000/cars/
+Content-Type: application/json
+
+{
+    "make": "Toyota",
+    "model": "Highlander",
+    "year": "2022",
+    "color": "Black",
+    "engineCapacity": "400hp",
+    "transmission": "Automatic",
+    "noOfSeats" :   7
+}
+
+
+
+###
+PUT http://localhost:8000/cars/655f573b41ba9e1caa2c1e31
+Content-Type: application/json
+
+{
+    "make": "Toyota",
+    "model": "Highlander",
+    "year": "2023",
+    "color": "Black",
+    "engineCapacity": "400hp",
+    "transmission": "Automatick",
+    "noOfSeats" :   7
+}
+
+###
+DELETE http://localhost:8000/cars/655f58749e32c0e58a129ae4

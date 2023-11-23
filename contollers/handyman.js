@@ -116,4 +116,18 @@ const getProfession = async (req, res, next) => {
     }
   };
 
-module.exports = {getAll, createHandyman, getProfession, updateHandyman, getSingle}
+const deleteHandyman = async(req, res) => {
+const handymanId = new ObjectId(req.params.id)
+const response = await mongodb
+.getDb()
+.db()
+.collection('handyman')
+.deleteMany({_id: handymanId}, true);
+if (response.deletedCount > 0) {
+    res.status(200).send();
+} else {
+    res.status(500).json(response.error || 'Some error occured while deleting the ward.')
+}
+};
+
+module.exports = {getAll, createHandyman, getProfession, updateHandyman, getSingle, deleteHandyman}

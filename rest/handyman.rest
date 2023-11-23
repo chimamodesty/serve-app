@@ -1,3 +1,6 @@
+###
+GET http://localhost:8000/handyman/
+
 POST http://localhost:8000/handyman/
 Content-Type: application/json
 
@@ -19,11 +22,9 @@ Content-Type: application/json
     "tel": "09099009978"
 }
 
-###
-GET http://localhost:8000/handyman/
 
 ###
-GET http://localhost:8000/handyman/6557c6fda6fc8fdae8a23c72
+GET http://localhost:8000/handyman/655f10b4ad27aec1ab443a34
 
 ####
-GET http://localhost:8000/handyman/profession/{"profession": "mason"}
+DELETE  http://localhost:8000/handyman/655f242ac3a35611adc52277
