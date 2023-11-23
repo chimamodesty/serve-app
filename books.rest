@@ -1,0 +1,14 @@
+###
+GET http://localhost:8000/books/
+
+###
+POST http://localhost:8000/books/
+Content-Type: application/json
+
+{
+  "author": "Jen Madison",
+  "title": "Java for All",
+  "edition": "1st edition",
+  "year": "2010"
+
+}

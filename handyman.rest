@@ -2,31 +2,33 @@ POST http://localhost:8000/handyman/
 Content-Type: application/json
 
 {
-    "name": "Seyi Makinde",
-    "profession": "Mason",
-    "city": "Ekiti",
+    "name": "Joshua",
+    "profession": "mason",
+    "city": "Benin",
     "tel": "09099009978"
 }
-
 
 ###
 GET http://localhost:8000/handyman/
 
+###
+GET http://localhost:8000/handyman/mason
 
 ###
-GET http://localhost:8000/books/
-
-###
-POST http://localhost:8000/books/
+PUT http://localhost:8000/handyman/6557c6cea6fc8fdae8a23c71
 Content-Type: application/json
 
 {
-  "author": "Jen Madison",
-  "title": "Java for All",
-  "edition": "1st edition",
-  "year": "2010"
-
+    "name": "Joshua",
+    "profession": "mason",
+    "city": "Benin",
+    "tel": "09099009978"
 }
+
+
+
+
+
 
 ###
 GET http://localhost:8000/artists/
