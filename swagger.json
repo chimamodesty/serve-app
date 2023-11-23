@@ -5,7 +5,7 @@
     "description": "An API for different services",
     "version": "1.0.0"
   },
-  "host": "http://localhost:8000",
+  "host": "localhost:8000",
   "basePath": "/",
   "schemes": "http",
   "paths": {
