@@ -26,5 +26,10 @@ Content-Type: application/json
 ###
 GET http://localhost:8000/handyman/655f10b4ad27aec1ab443a34
 
+
+###
+GET http://localhost:8000/handyman/profession/mas
+
+
 ####
-DELETE  http://localhost:8000/handyman/655f242ac3a35611adc52277
+DELETE  http://localhost:8000/handyman/655f242ac3a35611adc5227700

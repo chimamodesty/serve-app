@@ -1,6 +1,6 @@
 const mongodb = require('../db/connect')
 const  ObjectId = require("mongodb").ObjectId
-const {handymanDataSchema,  professionSchema, } = require("../validator/handyman/schema")
+const {handymanDataSchema,  professionSchema, idSchema } = require("../validator/handyman/schema")
 
 const createHandyman = async(req, res) => {
     const validation = await handymanDataSchema.validate(req.body)
@@ -80,6 +80,16 @@ const getAll = async( req, res, next) => {
 }
 
 const getSingle = async( req, res, next) => {
+    const validation = req.params.id
+
+    if(validation.length != 24 ){
+        const message = "Your id is lesser or higher than 24 characters"
+        res.status(400).json({
+          status: "error",
+          message : "invalid request data",
+          data: message
+        })  
+    } else {
     const handymanId = new ObjectId(req.params.id);
     const result = await mongodb
         .getDb()
@@ -90,14 +100,13 @@ const getSingle = async( req, res, next) => {
         res.setHeader("Content-Type", "application/json")
         res.status(200).json(lists)
     })
-}
+}}
 
 const getProfession = async (req, res, next) => {
-    const validation = await professionSchema.validate(req.params.profession)
-    const {error} = validation
+    const validation = req.params.profession
 
-    if(error){
-        const message = error.details.map( x => x.message)
+    if(validation.length < 3 ){
+        const message = "Your profession should be more than two characters long"
         res.status(400).json({
           status: "error",
           message : "invalid request data",
@@ -117,17 +126,27 @@ const getProfession = async (req, res, next) => {
   };
 
 const deleteHandyman = async(req, res) => {
-const handymanId = new ObjectId(req.params.id)
-const response = await mongodb
-.getDb()
-.db()
-.collection('handyman')
-.deleteMany({_id: handymanId}, true);
-if (response.deletedCount > 0) {
-    res.status(200).send();
-} else {
-    res.status(500).json(response.error || 'Some error occured while deleting the ward.')
-}
-};
+    const validation = req.params.id
+
+    if(validation.length != 24 ){
+        const message = "Your id is lesser or higher than 24 characters"
+        res.status(400).json({
+          status: "error",
+          message : "invalid request data",
+          data: message
+        })  
+    } else {
+    const handymanId = new ObjectId(req.params.id)
+    const response = await mongodb
+    .getDb()
+    .db()
+    .collection('handyman')
+    .deleteMany({_id: handymanId}, true);
+    if (response.deletedCount > 0) {
+        res.status(200).send();
+    } else {
+        res.status(500).json(response.error || 'Some error occured while deleting the ward.')
+    }
+}};
 
 module.exports = {getAll, createHandyman, getProfession, updateHandyman, getSingle, deleteHandyman}

@@ -12,16 +12,4 @@ const handymanDataSchema = joi.object({
     .required(), 
 })
 
-const professionSchema = joi.object({
-    params: {
-        profession: joi.string().max(24).min(24).required()
-    }
-})
-
-const idSchema = joi.object({
-    params: {
-        id: joi.string().max(24).min(24).required()
-    }
-})
-
-module.exports = {handymanDataSchema, idSchema, professionSchema}
+module.exports = {handymanDataSchema}

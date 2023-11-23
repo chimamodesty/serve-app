@@ -86,6 +86,16 @@ const getAll = async( req, res, next) => {
 }
 
 const getSingle = async( req, res, next) => {
+    const validation = req.params.id
+
+    if(validation.length != 24 ){
+        const message = "Your id is lesser or higher than 24 characters"
+        res.status(400).json({
+          status: "error",
+          message : "invalid request data",
+          data: message
+        })  
+    } else {
     const carId = new ObjectId(req.params.id);
     const result = await mongodb
         .getDb()
@@ -96,10 +106,20 @@ const getSingle = async( req, res, next) => {
         res.setHeader("Content-Type", "application/json")
         res.status(200).json(lists)
     })
-}
+}}
 
 
 const deleteCar = async(req, res) => {
+    const validation = req.params.id
+
+    if(validation.length != 24 ){
+        const message = "Your id is lesser or higher than 24 characters"
+        res.status(400).json({
+          status: "error",
+          message : "invalid request data",
+          data: message
+        })  
+    } else {
     const carId = new ObjectId(req.params.id)
     const response = await mongodb
     .getDb()
@@ -111,7 +131,7 @@ const deleteCar = async(req, res) => {
     } else {
       res.status(500).json(response.error || 'Some error occured while deleting the ward.')
     }
-  };
+ } };
 
 
 module.exports = {getAll, createCar, updateCar, getSingle, deleteCar}
