@@ -1,0 +1,35 @@
+###
+GET http://localhost:8000/handyman/
+
+POST http://localhost:8000/handyman/
+Content-Type: application/json
+
+{
+    "name": "J",
+    "profession": "mason",
+    "city": "Benin",
+    "tel": "09099009978"
+}
+
+###
+PUT http://localhost:8000/handyman/
+Content-Type: application/json
+
+{
+    "name": "Joshua",
+    "profession": "mason",
+    "city": "Benin",
+    "tel": "09099009978"
+}
+
+
+###
+GET http://localhost:8000/handyman/655f10b4ad27aec1ab443a34
+
+
+###
+GET http://localhost:8000/handyman/profession/mas
+
+
+####
+DELETE  http://localhost:8000/handyman/655f242ac3a35611adc5227700
