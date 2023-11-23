@@ -89,7 +89,7 @@ const getSingle = async( req, res, next) => {
     const validation = req.params.id
 
     if(validation.length != 24 ){
-        const message = "Your id is lesser or higher than 24 characters"
+        const message = "The id parameter should not me more than or lesser than 24 characters"
         res.status(400).json({
           status: "error",
           message : "invalid request data",
@@ -113,7 +113,7 @@ const deleteCar = async(req, res) => {
     const validation = req.params.id
 
     if(validation.length != 24 ){
-        const message = "Your id is lesser or higher than 24 characters"
+        const message = "The id parameter should not me more than or lesser than 24 characters"
         res.status(400).json({
           status: "error",
           message : "invalid request data",
