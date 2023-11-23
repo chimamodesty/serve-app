@@ -1,16 +1,16 @@
 const express = require('express');
-const router = express.Router();
+const routes = express.Router();
 
 const artistsController = require('../contollers/artists');
 
-router.get('/', artistsController.getAll);
+routes.get('/', artistsController.getAll);
 
-router.get('/:id', artistsController.getSingle);
+routes.get('/:id', artistsController.getSingle);
 
-router.post('/', artistsController.createArtists);
+routes.post('/', artistsController.createArtists);
 
-router.put('/:id', artistsController.updateArtists);
+routes.put('/:id', artistsController.updateArtists);
 
-router.delete('/:id', artistsController.deleteArtists);
+routes.delete('/:id', artistsController.deleteArtists);
 
-module.exports = router;
+module.exports = routes;

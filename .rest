@@ -45,8 +45,23 @@ DELETE http://localhost:8000/books/65592928d3eac796b0424cce
 Content-Type: application/json
 
 {
-    "author": "Jen Madison",
-    "title": "Java for All",
-    "edition": "1st edition",
-    "year": "2010"
+  "author": "Jen Madison",
+  "title": "Java for All",
+  "edition": "1st edition",
+  "year": "2010"
+
+}
+
+###
+GET http://localhost:8000/artists/
+
+###
+POST http://localhost:8000/artists/
+Content-Type: application/json
+
+{
+  "name": "Dream Theater",
+  "genre": "Progressive Metal",
+  "releaseDate": "2009",
+  "album": "Black Clouds & Silver Linings"
 }
