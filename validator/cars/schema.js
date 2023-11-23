@@ -10,10 +10,4 @@ const carDataSchema = joi.object({
     noOfSeats: joi.number().min(1).max(32).required(),
 })
 
-const idSchema = joi.object({
-    params: {
-        id: joi.string().max(24).min(24).required()
-    }
-})
-
 module.exports = {carDataSchema, idSchema}
