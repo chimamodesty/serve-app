@@ -2,6 +2,17 @@ POST http://localhost:8000/handyman/
 Content-Type: application/json
 
 {
+    "name": "J",
+    "profession": "mason",
+    "city": "Benin",
+    "tel": "09099009978"
+}
+
+###
+PUT http://localhost:8000/handyman/
+Content-Type: application/json
+
+{
     "name": "Joshua",
     "profession": "mason",
     "city": "Benin",
@@ -12,34 +23,7 @@ Content-Type: application/json
 GET http://localhost:8000/handyman/
 
 ###
-GET http://localhost:8000/handyman/mason
+GET http://localhost:8000/handyman/6557c6fda6fc8fdae8a23c72
 
-###
-PUT http://localhost:8000/handyman/6557c6cea6fc8fdae8a23c71
-Content-Type: application/json
-
-{
-    "name": "Joshua",
-    "profession": "mason",
-    "city": "Benin",
-    "tel": "09099009978"
-}
-
-
-
-
-
-
-###
-GET http://localhost:8000/artists/
-
-###
-POST http://localhost:8000/artists/
-Content-Type: application/json
-
-{
-  "name": "Dream Theater",
-  "genre": "Progressive Metal",
-  "releaseDate": "2009",
-  "album": "Black Clouds & Silver Linings"
-}
+####
+GET http://localhost:8000/handyman/profession/{"profession": "mason"}

@@ -12,7 +12,7 @@
         flex-direction: column;
         gap: 20px;
         margin-top: 10%;">
-            <form method="GET" action="https://temples-wards-api.onrender.com/auth/" class="unauthorized">
+            <form method="GET" action="http://localhost:8000/auth/" class="unauthorized">
                 <fieldset  style=" background-color: aliceblue;
                 display: flex;
                 flex-direction: column;
@@ -96,7 +96,7 @@
         let a = document.createElement('a')
         let text = document.createElement('p').value = "Explore"
         let button = document.querySelector('.buttonLink')
-        a.href = `https://temples-wards-api.onrender.com/api-docs`
+        a.href = `http://localhost:8000/api-docs`
         a.append(text)
         Object.assign(a.style, styles)
         button.append(a)

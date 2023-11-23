@@ -22,6 +22,8 @@
   "author": "Chima Modesty, Yannick leandro Da Silva and  David Ogbaudu",
   "license": "ISC",
   "dependencies": {
+    "@hapi/joi": "^17.1.1",
+    "axios": "^1.6.2",
     "body-parser": "^1.20.2",
     "cors": "^2.8.5",
     "dotenv": "^16.3.1",
