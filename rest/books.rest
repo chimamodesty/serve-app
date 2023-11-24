@@ -37,3 +37,19 @@ Content-Type: application/json
   "year": "2010"
 
 }
+
+
+###
+GET https://service-api-q9t1.onrender.com/books/
+
+###
+POST https://service-api-q9t1.onrender.com/books/
+Content-Type: application/json
+
+{
+  "author": "Jen Madison",
+  "title": "Java for All",
+  "edition": "1st edition",
+  "year": "2010"
+
+}
