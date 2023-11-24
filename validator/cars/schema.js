@@ -10,4 +10,12 @@ const carDataSchema = joi.object({
     noOfSeats: joi.number().min(1).max(32).required(),
 })
 
-module.exports = {carDataSchema}
+
+const bookschema = joi.object({
+    author: joi.string().min(2).max(20).required(),
+    title: joi.string().min(5).max(20).required(),
+    year: joi.string().min(4).max(4).required(),
+    edition: joi.string().min(3).max(15).required(),
+    
+})
+module.exports = {carDataSchema, bookschema}
