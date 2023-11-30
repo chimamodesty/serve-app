@@ -125,6 +125,7 @@ const getProfession = async (req, res, next) => {
     }
   };
 
+//Delete route
 const deleteHandyman = async(req, res) => {
     const validation = req.params.id
 
