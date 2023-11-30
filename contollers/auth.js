@@ -1,4 +1,5 @@
-const dotenv = require("dotenv");
+const dotenv = require("dotenv")
+dotenv.config();
 const axios = require('axios')
 const router= require('express').Router()
 
