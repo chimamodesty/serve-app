@@ -5,8 +5,8 @@ const doc = {
         title: "ServeApp API",
         description: "An API for different services"
     },
-    host: "http://localhost:8000",
-    schemes: "http"
+    host: "https://service-api-q9t1.onrender.com",
+    schemes: "https"
 }
 
 const outputFile = "./swagger.json"

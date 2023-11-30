@@ -29,8 +29,9 @@ const handleCallback = ( {query : {code}}, res) => {
         .then((res) =>
             {
                userData = res.data
+               console.log(userData)
             })
-        res.redirect(`/?token=${token}`)
+        res.redirect(`https://service-api-q9t1.onrender.com/?token=${token}`)
 
         
     })
