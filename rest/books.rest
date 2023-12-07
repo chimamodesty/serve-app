@@ -6,10 +6,10 @@ POST http://localhost:8000/books/
 Content-Type: application/json
 
 {
-  "author": "Jen Madison",
-  "title": "Java for All",
+  "author": "Mack Rudy",
+  "title": "MYSQL",
   "edition": "1st edition",
-  "year": "2010"
+  "year": "2017"
 
 }
 
@@ -21,17 +21,17 @@ Content-Type: application/json
 {
   "author": "Jen Madison",
   "title": "Java for All",
-  "edition": "1st edition",
+  "edition": "2nd Edition",
   "year": "2010"
 
 }
 
 ###
-DELETE  http://localhost:8000/books/
+DELETE  http://localhost:8000/books/65586a68ebf535d2c33fba5f
 Content-Type: application/json
 
 {
-  "author": "Jen Madison",
+  "author": "Jude Ruud",
   "title": "Java for All",
   "edition": "1st edition",
   "year": "2010"
@@ -47,7 +47,7 @@ POST https://service-api-q9t1.onrender.com/books/
 Content-Type: application/json
 
 {
-  "author": "Jen Madison",
+  "author": "Euna Chima",
   "title": "Java for All",
   "edition": "1st edition",
   "year": "2010"
